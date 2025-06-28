@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Free Fire Diamond Top-Up</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #fff;
+      margin: 0; padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background: #1f1f1f;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #ff3d00;
+      max-width: 420px;
+      width: 100%;
+    }
+    h1 {
+      text-align: center;
+      color: #ff3d00;
+      margin-bottom: 25px;
+      letter-spacing: 2px;
+    }
+    label {
+      display: block;
+      margin: 15px 0 6px;
+      font-weight: 600;
+      color: #ff3d00;
+    }
+    input[type="text"], select {
+      width: 100%;
+      padding: 12px 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      background: #2c2c2c;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+    input[type="text"]:focus, select:focus {
+      background: #3a3a3a;
+    }
+    select option {
+      background: #2c2c2c;
+      color: #fff;
+    }
+    .payment-info {
+      background: #292929;
+      border-radius: 8px;
+      padding: 15px;
+      margin-top: 25px;
+      font-size: 14px;
+      line-height: 1.4;
+      color: #ddd;
+      border: 1px solid #ff3d00;
+    }
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 14px;
+      background: #ff3d00;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      letter-spacing: 1px;
+    }
+    button:hover {
+      background: #e63600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Free Fire Diamond Top-Up</h1>
+    <form action="https://formspree.io/f/xgvyrnnr" method="POST">
+      <label for="ffId">Free Fire User ID</label>
+      <input
+        type="text"
+        id="ffId"
+        name="FreeFireID"
+        placeholder="Enter your Free Fire ID"
+        required
+        pattern="\d+"
+        title="Only digits allowed"
+      />
+
+      <label for="package">Select Diamond Package</label>
+      <select id="package" name="DiamondPackage" required>
+        <option value="" disabled selected>Select package</option>
+        <option value="100 Diamonds - ₹60">100 Diamonds - ₹60</option>
+        <option value="200 Diamonds - ₹80">200 Diamonds - ₹80</option>
+        <option value="300 Diamonds - ₹120">300 Diamonds - ₹120</option>
+        <option value="500 Diamonds - ₹220">500 Diamonds - ₹220</option>
+        <option value="1100 Diamonds - ₹350">1100 Diamonds - ₹350</option>
+      </select>
+
+      <label for="utr">UTR Number (Payment Verification)</label>
+      <input
+        type="text"
+        id="utr"
+        name="UTRNumber"
+        placeholder="Enter your UTR/Transaction No"
+        required
+      />
+
+      <div class="payment-info">
+        <strong>Payment Method:</strong><br />
+        UPI ID: <code>hakimiwashifali</code><br />
+        <small>
+          Please pay the exact amount after submitting the form.<br />
+          You will receive diamonds within 1 minute after verification.<br />
+          Send payment screenshot and UTR number for fast processing.
+        </small>
+      </div>
+
+      <button type="submit">Submit Top-Up Request</button>
+    </form>
+  </div>
+</body>
+</html>
